@@ -303,7 +303,14 @@
       
         
           
-            
+            <p>分区里文件被误删，请找回。附件为压缩包，解压后做题<br>题目链接：<a href="http://pan.baidu.com/s/1i5mZPEt" target="_blank" rel="noopener">http://pan.baidu.com/s/1i5mZPEt</a> 密码：yx81</p>
+<p>binwalk分析可得，该文件是一个liunx系统相关文件<br>挂载到kali ls查看<br>用extundelete开始恢复文件<br>恢复之前先查看下文件系统 <code>#df -T</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/8359660-ff4b42a9d4a05cc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>根据文件系统查看已删除的文件，并开始恢复</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/8359660-101dd4cc7363f6f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/8359660-4c70898837753f5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>找到关键文件flag.txt！！<br>再cat查看一下<br><img src="http://upload-images.jianshu.io/upload_images/8359660-bc4a5424ef24da05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+
           
         
       
