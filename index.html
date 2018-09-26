@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next mist use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -113,7 +113,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -209,6 +209,36 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
           </a>
         </li>
       
@@ -326,24 +356,18 @@
       
         
           
-            <p>环境：Ubuntu 16</p>
-<p>总共需要配置三个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/apache2.conf</span><br><span class="line">/etc/apache2/ports.conf</span><br><span class="line">/etc/apache2/sites-available/000-default.conf</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li><p>apache2.conf 添加如下信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NameVirtualHost *:81</span><br><span class="line">&lt;VirtualHost *:81&gt;</span><br><span class="line">         ServerAdmin webmaster@domain.com</span><br><span class="line">         DocumentRoot &quot;/var/www/html81&quot;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>ports.conf 添加监听端口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Listen 81</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>sites-available/000-default.conf 添加ServerAdmin，log等配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:81&gt;</span><br><span class="line">        ServerAdmin webmaster@localhost</span><br><span class="line">        DocumentRoot /var/www/html81</span><br><span class="line">        ErrorLog $&#123;APACHE_LOG_DIR&#125;/error_port81.log</span><br><span class="line">        CustomLog $&#123;APACHE_LOG_DIR&#125;/access_port81.log combined</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>ps：若是阿里云服务器，则需进入控制台，安全组添加81端口开放规则</p>
-</li>
-<li>上述四项完成，重启apache服务，浏览器打开即可</li>
-</ol>
+          环境：Ubuntu 16
+总共需要配置三个文件123/etc/apache2/apache2.conf/etc/apache2/ports.conf/etc/apache2/sites-available/000-default.conf
 
-          
+apache2.conf 添加如下信息
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/25/linux服务器多端口映射配置/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -461,15 +485,16 @@
       
         
           
-            <p>分区里文件被误删，请找回。附件为压缩包，解压后做题<br>题目链接：<a href="http://pan.baidu.com/s/1i5mZPEt" target="_blank" rel="noopener">http://pan.baidu.com/s/1i5mZPEt</a> 密码：yx81</p>
-<p>binwalk分析可得，该文件是一个liunx系统相关文件<br>挂载到kali ls查看<br>用extundelete开始恢复文件<br>恢复之前先查看下文件系统 <code>#df -T</code></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/8359660-ff4b42a9d4a05cc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>根据文件系统查看已删除的文件，并开始恢复</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/8359660-101dd4cc7363f6f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/8359660-4c70898837753f5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>找到关键文件flag.txt！！<br>再cat查看一下<br><img src="http://upload-images.jianshu.io/upload_images/8359660-bc4a5424ef24da05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-
-          
+          分区里文件被误删，请找回。附件为压缩包，解压后做题题目链接：http://pan.baidu.com/s/1i5mZPEt 密码：yx81
+binwalk分析可得，该文件是一个liunx系统相关文件挂载到kali ls查看用extundelete开始恢复文件恢复之前先查看下文件系
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/25/磁盘文件隐写恢复/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -619,7 +644,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 -->
 
