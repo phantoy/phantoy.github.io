@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[linux服务器多端口映射配置]]></title>
     <url>%2F2018%2F09%2F25%2Flinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%9A%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[环境：Ubuntu 16 总共需要配置三个文件 123/etc/apache2/apache2.conf/etc/apache2/ports.conf/etc/apache2/sites-available/000-default.conf 1.apache2.conf 添加如下信息：12345NameVirtualHost *:81&lt;VirtualHost *:81&gt; ServerAdmin webmaster@domain.com DocumentRoot &quot;/var/www/html81&quot;&lt;/VirtualHost&gt; 2.ports.conf 添加监听端口1Listen 81 3.sites-available/000-default.conf 添加ServerAdmin，log等配置123456&lt;VirtualHost *:81&gt; ServerAdmin webmaster@localhost DocumentRoot /var/www/html81 ErrorLog $&#123;APACHE_LOG_DIR&#125;/error_port81.log CustomLog $&#123;APACHE_LOG_DIR&#125;/access_port81.log combined&lt;/VirtualHost&gt; 4.ps：若是阿里云服务器，则需进入控制台，安全组添加81端口开放规则5.上述四项完成，重启apache服务，浏览器打开即可]]></content>
+    <content type="text"><![CDATA[环境：Ubuntu 16.04.5 LTS总共需要配置三个文件 123/etc/apache2/apache2.conf/etc/apache2/ports.conf/etc/apache2/sites-available/000-default.conf 1.apache2.conf 添加如下信息：12345NameVirtualHost *:81&lt;VirtualHost *:81&gt; ServerAdmin webmaster@domain.com DocumentRoot &quot;/var/www/html81&quot;&lt;/VirtualHost&gt; 2.ports.conf 添加监听端口1Listen 81 3.sites-available/000-default.conf 添加ServerAdmin，log等配置123456&lt;VirtualHost *:81&gt; ServerAdmin webmaster@localhost DocumentRoot /var/www/html81 ErrorLog $&#123;APACHE_LOG_DIR&#125;/error_port81.log CustomLog $&#123;APACHE_LOG_DIR&#125;/access_port81.log combined&lt;/VirtualHost&gt; 4.若是阿里云服务器，则需进入控制台，安全组添加81端口开放规则5.上述四项完成，重启apache服务，浏览器打开即可]]></content>
+      <tags>
+        <tag>tags</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[磁盘文件隐写恢复]]></title>
