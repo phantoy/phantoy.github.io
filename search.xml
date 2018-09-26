@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[NTFS数据流隐写]]></title>
+    <url>%2F2018%2F09%2F26%2FNTFS%E6%95%B0%E6%8D%AE%E6%B5%81%E9%9A%90%E5%86%99%2F</url>
+    <content type="text"><![CDATA[文件链接：http://t.cn/R0pt7XC是一个ctf.rar，解压后是一个ctf文件夹，文件夹内有一个ctf.png做misc题首先第六感要强一点，在解压的过程里自己提出疑问：为何是rar格式？ctf里常见的是zip包（rar的加密暴力破解确实慢，但是这题又没加密） ctf.rar大小149kb，ctf.png大小119kb，解压前的文件比解压后的文件小? 其中，ctf.png表面是： 既然说到隐写，就先用binwalk来查看下 末尾有一个zip包，最常见的隐藏方式，用binwalk -e即可导出，而且zip包也没有密码，解压后是1.jpg，打开是大概这样的材质： 其实如果对这种图接触较多的话，发现很可能是visual-cryptography，相关链接：https://en.wikipedia.org/wiki/Visual_cryptography这种视觉密码，是基于两张图的异或，然后你就会疑惑这不是只有一张图吗？于是回到最初的ctf.rar，把它丢进去winhex查看 发现有2.jpg的字样，这更进一步证明了上面的猜想。稍微搜索下，会发现NTFS交换数据流（ADS）这种隐藏文件的方式。 使用lads.exe /s 可以发现ctf.jpg:2.jpg （至于lads.exe，自己去搜索，或者在某些群里的群共享文件里就有） 这里我是用notepad++.exe ctf.png:2.jpg 就可以在notepad++里显示文件，再另存为图片即可（这里notepad++我是加到了path系统变量里，解题也可以用各种软件来打开这个文件流，然后另存为图片即可） 有了1.jpg和2.jpg后，用Stegsolve打开1.jpg，然后Analyse→Image Combiner，选择 2.jpg，默认是XOR模式，即可看到flag]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>隐写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux服务器多端口映射配置]]></title>
     <url>%2F2018%2F09%2F25%2Flinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%9A%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[环境：Ubuntu 16.04.5 LTS总共需要配置三个文件 123/etc/apache2/apache2.conf/etc/apache2/ports.conf/etc/apache2/sites-available/000-default.conf 1.apache2.conf 添加如下信息：12345NameVirtualHost *:81&lt;VirtualHost *:81&gt; ServerAdmin webmaster@domain.com DocumentRoot &quot;/var/www/html81&quot;&lt;/VirtualHost&gt; 2.ports.conf 添加监听端口1Listen 81 3.sites-available/000-default.conf 添加ServerAdmin，log等配置123456&lt;VirtualHost *:81&gt; ServerAdmin webmaster@localhost DocumentRoot /var/www/html81 ErrorLog $&#123;APACHE_LOG_DIR&#125;/error_port81.log CustomLog $&#123;APACHE_LOG_DIR&#125;/access_port81.log combined&lt;/VirtualHost&gt; 4.若是阿里云服务器，则需进入控制台，安全组添加81端口开放规则5.上述四项完成，重启apache服务，浏览器打开即可]]></content>
+      <categories>
+        <category>系统安全</category>
+      </categories>
       <tags>
-        <tag>tags</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[磁盘文件隐写恢复]]></title>
     <url>%2F2018%2F09%2F25%2F%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6%E9%9A%90%E5%86%99%E6%81%A2%E5%A4%8D%2F</url>
     <content type="text"><![CDATA[分区里文件被误删，请找回。附件为压缩包，解压后做题题目链接：http://pan.baidu.com/s/1i5mZPEt 密码：yx81 binwalk分析可得，该文件是一个liunx系统相关文件挂载到kali ls查看用extundelete开始恢复文件恢复之前先查看下文件系统 #df -T 根据文件系统查看已删除的文件，并开始恢复 找到关键文件flag.txt！！再cat查看一下]]></content>
+      <categories>
+        <category>取证分析</category>
+      </categories>
       <tags>
-        <tag>tags</tag>
+        <tag>取证</tag>
       </tags>
   </entry>
 </search>

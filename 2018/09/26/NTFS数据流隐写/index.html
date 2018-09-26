@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="隐写," />
 
 
 
@@ -96,16 +96,23 @@
 
 
 
-<meta name="description" content="昨夜星辰昨夜风">
-<meta property="og:type" content="website">
-<meta property="og:title" content="昨夜星辰昨夜风&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta name="description" content="文件链接：http://t.cn/R0pt7XC是一个ctf.rar，解压后是一个ctf文件夹，文件夹内有一个ctf.png做misc题首先第六感要强一点，在解压的过程里自己提出疑问：为何是rar格式？ctf里常见的是zip包（rar的加密暴力破解确实慢，但是这题又没加密） ctf.rar大小149kb，ctf.png大小119kb，解压前的文件比解压后的文件小? 其中，ctf.png表面是： 既">
+<meta name="keywords" content="隐写">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NTFS数据流隐写">
+<meta property="og:url" content="http://yoursite.com/2018/09/26/NTFS数据流隐写/index.html">
 <meta property="og:site_name" content="昨夜星辰昨夜风&#39;s blog">
-<meta property="og:description" content="昨夜星辰昨夜风">
+<meta property="og:description" content="文件链接：http://t.cn/R0pt7XC是一个ctf.rar，解压后是一个ctf文件夹，文件夹内有一个ctf.png做misc题首先第六感要强一点，在解压的过程里自己提出疑问：为何是rar格式？ctf里常见的是zip包（rar的加密暴力破解确实慢，但是这题又没加密） ctf.rar大小149kb，ctf.png大小119kb，解压前的文件比解压后的文件小? 其中，ctf.png表面是： 既">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/09/26/NTFS数据流隐写/ctf.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/26/NTFS数据流隐写/binwalk-ctf.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/26/NTFS数据流隐写/binwalk-e_result.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/26/NTFS数据流隐写/rar_hex.jpg">
+<meta property="og:updated_time" content="2018-09-26T15:39:25.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="昨夜星辰昨夜风&#39;s blog">
-<meta name="twitter:description" content="昨夜星辰昨夜风">
+<meta name="twitter:title" content="NTFS数据流隐写">
+<meta name="twitter:description" content="文件链接：http://t.cn/R0pt7XC是一个ctf.rar，解压后是一个ctf文件夹，文件夹内有一个ctf.png做misc题首先第六感要强一点，在解压的过程里自己提出疑问：为何是rar格式？ctf里常见的是zip包（rar的加密暴力破解确实慢，但是这题又没加密） ctf.rar大小149kb，ctf.png大小119kb，解压前的文件比解压后的文件小? 其中，ctf.png表面是： 既">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/26/NTFS数据流隐写/ctf.png">
 
 
 
@@ -135,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/26/NTFS数据流隐写/"/>
 
 
 
 
 
-  <title>Archive | 昨夜星辰昨夜风's blog</title>
+  <title>NTFS数据流隐写 | 昨夜星辰昨夜风's blog</title>
   
 
 
@@ -165,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,148 +276,188 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/26/NTFS数据流隐写/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="昨夜星辰昨夜风">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昨夜星辰昨夜风's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">NTFS数据流隐写</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-26T23:12:13+08:00">
+                2018-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 3 posts in total. Keep on posting.
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/26/NTFS数据流隐写/" itemprop="url">
-              
-                <span itemprop="name">NTFS数据流隐写</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-26T23:12:13+08:00"
-              content="2018-09-26" >
-          09-26
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/25/linux服务器多端口映射配置/" itemprop="url">
-              
-                <span itemprop="name">linux服务器多端口映射配置</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-25T16:22:15+08:00"
-              content="2018-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/09/25/磁盘文件隐写恢复/" itemprop="url">
-              
-                <span itemprop="name">磁盘文件隐写恢复</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-25T15:42:45+08:00"
-              content="2018-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>文件链接：<a href="http://t.cn/R0pt7XC" target="_blank" rel="noopener">http://t.cn/R0pt7XC</a><br>是一个ctf.rar，解压后是一个ctf文件夹，文件夹内有一个ctf.png<br>做misc题首先第六感要强一点，在解压的过程里自己提出疑问：<br>为何是rar格式？ctf里常见的是zip包（rar的加密暴力破解确实慢，但是这题又没加密）</p>
+<p>ctf.rar大小149kb，ctf.png大小119kb，解压前的文件比解压后的文件小?</p>
+<p>其中，ctf.png表面是：<br><img src="/2018/09/26/NTFS数据流隐写/ctf.png" alt=""></p>
+<p>既然说到隐写，就先用binwalk来查看下<br><img src="/2018/09/26/NTFS数据流隐写/binwalk-ctf.jpg" alt=""></p>
+<p>末尾有一个zip包，最常见的隐藏方式，用binwalk -e即可导出，而且zip包也没有密码，解压后是1.jpg，打开是大概这样的材质：<br><img src="/2018/09/26/NTFS数据流隐写/binwalk-e_result.jpg" alt=""></p>
+<p>其实如果对这种图接触较多的话，发现很可能是visual-cryptography，相关链接：<br><a href="https://en.wikipedia.org/wiki/Visual_cryptography" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Visual_cryptography</a><br>这种视觉密码，是基于两张图的异或，然后你就会疑惑这不是只有一张图吗？于是回到最初的ctf.rar，把它丢进去winhex查看<br><img src="/2018/09/26/NTFS数据流隐写/rar_hex.jpg" alt=""></p>
+<p>发现有2.jpg的字样，这更进一步证明了上面的猜想。稍微搜索下，会发现NTFS交换数据流（ADS）这种隐藏文件的方式。</p>
+<p>使用lads.exe /s 可以发现ctf.jpg:2.jpg</p>
+<p>（至于lads.exe，自己去搜索，或者在某些群里的群共享文件里就有）</p>
+<p>这里我是用notepad++.exe ctf.png:2.jpg 就可以在notepad++里显示文件，再另存为图片即可（这里notepad++我是加到了path系统变量里，解题也可以用各种软件来打开这个文件流，然后另存为图片即可）</p>
+<p>有了1.jpg和2.jpg后，用Stegsolve打开1.jpg，然后Analyse→Image Combiner，选择 2.jpg，默认是XOR模式，即可看到flag</p>
 
       
-
     </div>
+    
+    
+    
+
+	
+      <div>
+        
+    <div style="text-align:center;color: #ccc;font-size:14px;">
+        ------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------</div>
+    
+      </div>
+    
+	
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/隐写/" rel="tag"><i class="fa fa-tag"></i> 隐写</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/25/linux服务器多端口映射配置/" rel="next" title="linux服务器多端口映射配置">
+                <i class="fa fa-chevron-left"></i> linux服务器多端口映射配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -418,6 +465,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -644,6 +695,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
