@@ -5,7 +5,7 @@
     <url>%2F2018%2F09%2F29%2Fnmap%E5%88%97%E4%B8%BE%E6%89%80%E6%9C%89%E8%84%9A%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[cd /usr/share/nmap/scripts &amp;&amp; ls 举例使用：利用nmap爆破mysql密码 nmap -p 3306 –script=mysql-brute.nse -v 127.0.0.1 得出用户名为root，密码为空。]]></content>
       <categories>
-        <category>Linux</category>
+        <category>系统安全</category>
       </categories>
       <tags>
         <tag>linux</tag>
